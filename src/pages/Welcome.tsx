@@ -1,6 +1,6 @@
 import { MobileContainer } from "@/components/layout/MobileContainer";
 import { TrackingInput } from "@/features/search/TrackingInput";
-import { Package, Truck } from "lucide-react";
+import { Truck } from "lucide-react";
 
 export const WelcomePage = () => {
   return (

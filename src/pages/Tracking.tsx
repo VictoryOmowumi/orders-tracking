@@ -5,11 +5,11 @@ import { LiveMap } from "@/features/tracking/LiveMap";
 import { OrderSummaryCard } from "@/features/tracking/OrderSummaryCard";
 import { TrackingTimeline, type TrackingEvent } from "@/features/tracking/TrackingTimeline";
 import { DriverCard } from "@/features/tracking/DriverCard";
-import { ChevronLeft, Truck, Package, MapPin, PhoneCall } from "lucide-react";
+import { ChevronLeft, Package, PhoneCall } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
 import { VarianceList } from "@/features/pod/VarianceList";
 import { SuccessRating } from "@/features/rating/SuccessRating";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
 export const sevenUpItems: OrderItem[] = [
     {
@@ -276,7 +276,6 @@ export const TrackingPage = () => {
                     {viewMode === 'success' && (
                         <div className="h-full">
                             <SuccessRating
-                                onHome={() => navigate('/')}
                                 handoffCode={handoffCode}
                                 deliveryType={deliveryType}
                             />
@@ -325,7 +324,6 @@ export const TrackingPage = () => {
                 open={detailsOpen}
                 onClose={() => setDetailsOpen(false)}
                 items={sevenUpItems}
-                orderId={id || "#8839-XZ"}
             />
 
         </MobileContainer>

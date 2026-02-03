@@ -1,19 +1,15 @@
 import { useState } from "react";
-import { Check, Star, Home, HelpCircle } from "lucide-react";
+import { Check, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useNavigate } from "react-router-dom";
 
 interface SuccessRatingProps {
-  onHome: () => void;
   handoffCode: string;
   deliveryType: "complete" | "incomplete";
 }
 
-export const SuccessRating = ({ onHome, handoffCode, deliveryType }: SuccessRatingProps) => {
+export const SuccessRating = ({ handoffCode, deliveryType }: SuccessRatingProps) => {
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
-  const navigate = useNavigate();
-  console.log(onHome)
 
   return (
     <div className="flex flex-col h-full items-center text-center px-4 pt-6 pb-4">

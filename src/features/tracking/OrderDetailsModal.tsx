@@ -1,4 +1,4 @@
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 export interface OrderItem {
   id: string;
   name: string;
@@ -12,10 +12,9 @@ type OrderDetailsModalProps = {
   open: boolean;
   onClose: () => void;
   items: OrderItem[];
-  orderId: string;
 };
 
-export function OrderDetailsModal({ open, onClose, items, orderId }: OrderDetailsModalProps) {
+export function OrderDetailsModal({ open, onClose, items }: OrderDetailsModalProps) {
   if (!open) return null;
 
   return (
